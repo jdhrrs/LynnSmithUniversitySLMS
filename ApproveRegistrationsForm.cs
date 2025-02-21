@@ -19,11 +19,11 @@ namespace LynnSmithUniversitySLMS
             lstRequests.Items.Clear();  // Clear previous data
 
             string query = @"
-        SELECT pr.RequestID, u.Username, c.CourseName 
-        FROM PendingRegistrations pr
-        JOIN Users u ON pr.StudentID = u.Id
-        JOIN Courses c ON pr.CourseID = c.CourseID
-        WHERE pr.Status = 'Pending'";
+                SELECT pr.RegistrationID, u.Username, c.CourseName 
+                FROM PendingRegistrations pr
+                JOIN Users u ON pr.StudentID = u.Id
+                JOIN Courses c ON pr.CourseID = c.CourseID
+                WHERE pr.Status = 'Pending'";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -35,7 +35,7 @@ namespace LynnSmithUniversitySLMS
                     {
                         lstRequests.Items.Add(new RequestItem
                         {
-                            RequestID = reader["RequestID"].ToString(),
+                            RequestID = reader["RegistrationID"].ToString(), // ✅ Fixed column name
                             DisplayText = $"{reader["Username"]} requested {reader["CourseName"]}"
                         });
                     }
@@ -48,7 +48,6 @@ namespace LynnSmithUniversitySLMS
                 MessageBox.Show("No pending registration requests.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
         private void btnApprove_Click(object sender, EventArgs e)
         {
@@ -71,14 +70,16 @@ namespace LynnSmithUniversitySLMS
         private void ApproveRequest(string requestID)
         {
             string query = @"
-                DECLARE @StudentID INT, @CourseID NVARCHAR(50);
-                SELECT @StudentID = StudentID, @CourseID = CourseID FROM PendingRegistrations WHERE RequestID = @RequestID;
+                DECLARE @StudentID INT, @CourseID INT;
+                SELECT @StudentID = StudentID, @CourseID = CourseID 
+                FROM PendingRegistrations 
+                WHERE RegistrationID = @RequestID;
 
                 -- Insert into StudentCourses
                 INSERT INTO StudentCourses (StudentID, CourseID) VALUES (@StudentID, @CourseID);
 
                 -- Remove from PendingRegistrations
-                DELETE FROM PendingRegistrations WHERE RequestID = @RequestID;
+                DELETE FROM PendingRegistrations WHERE RegistrationID = @RequestID;
             ";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -97,7 +98,7 @@ namespace LynnSmithUniversitySLMS
 
         private void DenyRequest(string requestID)
         {
-            string query = "DELETE FROM PendingRegistrations WHERE RequestID = @RequestID";
+            string query = "DELETE FROM PendingRegistrations WHERE RegistrationID = @RequestID";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
