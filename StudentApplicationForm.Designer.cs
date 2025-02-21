@@ -45,163 +45,78 @@
             submitButton = new Button();
             fileStatusLabel = new Label();
             SuspendLayout();
-            // 
-            // nameLabel
-            // 
+
+            // Name Label
             nameLabel.AutoSize = true;
             nameLabel.Location = new Point(20, 20);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(84, 21);
-            nameLabel.TabIndex = 0;
             nameLabel.Text = "Full Name:";
-            // 
-            // fullNameTextBox
-            // 
+            // Full Name TextBox
             fullNameTextBox.Location = new Point(150, 20);
-            fullNameTextBox.Name = "fullNameTextBox";
-            fullNameTextBox.Size = new Size(200, 29);
-            fullNameTextBox.TabIndex = 1;
-            // 
-            // emailLabel
-            // 
+            fullNameTextBox.Size = new Size(200, 20);
+            // Email Label
             emailLabel.AutoSize = true;
             emailLabel.Location = new Point(20, 50);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(51, 21);
-            emailLabel.TabIndex = 2;
             emailLabel.Text = "Email:";
-            // 
-            // emailTextBox
-            // 
+            // Email TextBox
             emailTextBox.Location = new Point(150, 50);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(200, 29);
-            emailTextBox.TabIndex = 3;
-            // 
-            // addressLabel
-            // 
+            emailTextBox.Size = new Size(200, 20);
+            // Address Label
             addressLabel.AutoSize = true;
             addressLabel.Location = new Point(20, 80);
-            addressLabel.Name = "addressLabel";
-            addressLabel.Size = new Size(69, 21);
-            addressLabel.TabIndex = 4;
             addressLabel.Text = "Address:";
-            // 
-            // addressTextBox
-            // 
+            // Address TextBox
             addressTextBox.Location = new Point(150, 80);
-            addressTextBox.Name = "addressTextBox";
-            addressTextBox.Size = new Size(200, 29);
-            addressTextBox.TabIndex = 5;
-            // 
-            // cityLabel
-            // 
+            addressTextBox.Size = new Size(200, 20);
+            // City Label
             cityLabel.AutoSize = true;
             cityLabel.Location = new Point(20, 110);
-            cityLabel.Name = "cityLabel";
-            cityLabel.Size = new Size(40, 21);
-            cityLabel.TabIndex = 6;
             cityLabel.Text = "City:";
-            // 
-            // cityTextBox
-            // 
+            // City TextBox
             cityTextBox.Location = new Point(150, 110);
-            cityTextBox.Name = "cityTextBox";
-            cityTextBox.Size = new Size(200, 29);
-            cityTextBox.TabIndex = 7;
-            // 
-            // stateLabel
-            // 
+            cityTextBox.Size = new Size(200, 20);
+            // State Label
             stateLabel.AutoSize = true;
             stateLabel.Location = new Point(20, 140);
-            stateLabel.Name = "stateLabel";
-            stateLabel.Size = new Size(47, 21);
-            stateLabel.TabIndex = 8;
             stateLabel.Text = "State:";
-            // 
-            // stateTextBox
-            // 
+            // State TextBox
             stateTextBox.Location = new Point(150, 140);
-            stateTextBox.Name = "stateTextBox";
-            stateTextBox.Size = new Size(50, 29);
-            stateTextBox.TabIndex = 9;
-            // 
-            // zipLabel
-            // 
+            stateTextBox.Size = new Size(50, 20);
+            // Zip Label
             zipLabel.AutoSize = true;
             zipLabel.Location = new Point(220, 140);
-            zipLabel.Name = "zipLabel";
-            zipLabel.Size = new Size(35, 21);
-            zipLabel.TabIndex = 10;
             zipLabel.Text = "ZIP:";
-            // 
-            // zipTextBox
-            // 
+            // Zip TextBox
             zipTextBox.Location = new Point(260, 140);
-            zipTextBox.Name = "zipTextBox";
-            zipTextBox.Size = new Size(90, 29);
-            zipTextBox.TabIndex = 11;
-            // 
-            // highSchoolLabel
-            // 
+            zipTextBox.Size = new Size(90, 20);
+            // High School Label
             highSchoolLabel.AutoSize = true;
             highSchoolLabel.Location = new Point(20, 170);
-            highSchoolLabel.Name = "highSchoolLabel";
-            highSchoolLabel.Size = new Size(97, 21);
-            highSchoolLabel.TabIndex = 12;
             highSchoolLabel.Text = "High School:";
-            // 
-            // highSchoolTextBox
-            // 
+            // High School TextBox
             highSchoolTextBox.Location = new Point(150, 170);
-            highSchoolTextBox.Name = "highSchoolTextBox";
-            highSchoolTextBox.Size = new Size(200, 29);
-            highSchoolTextBox.TabIndex = 13;
-            // 
-            // hsContactLabel
-            // 
+            highSchoolTextBox.Size = new Size(200, 20);
+            // High School Contact Label
             hsContactLabel.AutoSize = true;
             hsContactLabel.Location = new Point(20, 200);
-            hsContactLabel.Name = "hsContactLabel";
-            hsContactLabel.Size = new Size(121, 21);
-            hsContactLabel.TabIndex = 14;
             hsContactLabel.Text = "HS Contact Info:";
-            // 
-            // hsContactTextBox
-            // 
+            // High School Contact TextBox
             hsContactTextBox.Location = new Point(150, 200);
-            hsContactTextBox.Name = "hsContactTextBox";
-            hsContactTextBox.Size = new Size(200, 29);
-            hsContactTextBox.TabIndex = 15;
-            // 
-            // uploadButton
-            // 
+            hsContactTextBox.Size = new Size(200, 20);
+            // Upload Button
             uploadButton.Location = new Point(150, 230);
-            uploadButton.Name = "uploadButton";
             uploadButton.Size = new Size(120, 30);
-            uploadButton.TabIndex = 16;
             uploadButton.Text = "Upload Document";
             uploadButton.Click += uploadButton_Click;
-            // 
-            // submitButton
-            // 
-            submitButton.Location = new Point(150, 300);
-            submitButton.Name = "submitButton";
-            submitButton.Size = new Size(120, 30);
-            submitButton.TabIndex = 18;
-            submitButton.Text = "Submit Application";
-            submitButton.Click += submitButton_Click;
-            // 
-            // fileStatusLabel
-            // 
+            // File Status Label
             fileStatusLabel.AutoSize = true;
             fileStatusLabel.Location = new Point(150, 270);
-            fileStatusLabel.Name = "fileStatusLabel";
-            fileStatusLabel.Size = new Size(0, 21);
-            fileStatusLabel.TabIndex = 17;
-            // 
+            fileStatusLabel.Size = new Size(150, 20);
+            // Submit Button
+            submitButton.Location = new Point(150, 300);
+            submitButton.Size = new Size(120, 30);
+            submitButton.Text = "Submit Application";
+            submitButton.Click += submitButton_Click;
             // StudentApplicationForm
-            // 
             ClientSize = new Size(400, 350);
             Controls.Add(nameLabel);
             Controls.Add(fullNameTextBox);
@@ -224,7 +139,6 @@
             Controls.Add(submitButton);
             Name = "StudentApplicationForm";
             Text = "University Application Form";
-            Load += StudentApplicationForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
