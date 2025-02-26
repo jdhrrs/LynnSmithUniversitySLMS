@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 ﻿USE LynnSmithUniversityDB;
 SELECT COLUMN_NAME
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'PendingRegistrations';
-=======
-﻿USE LynnSmithUniversityDB;
-SELECT COLUMN_NAME
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'PendingRegistrations';
->>>>>>> ab6290af3d3c1f3152b8793e1f1d1f34f1c8f02b
